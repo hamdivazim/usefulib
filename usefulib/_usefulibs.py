@@ -12,6 +12,7 @@ Add your useful method here if you are contributing. Remember to add unit tests 
 import random # generate_random_string()
 import string # generate_random_string()
 import uuid # generateUUID()
+import os # external_verbose_output()
 
 """"""
 
@@ -89,6 +90,8 @@ def filter_by_condition(lst, condition: str):
     return result
 
 def generate_random_string(word_length=18):
+    """ @hamdivazim - generates a random string using ASCII chars, digits and special chars. """
+
     components = [string.ascii_letters, string.digits, "!@#$%&"]
 
     chars = []
@@ -106,6 +109,8 @@ def generate_random_string(word_length=18):
     return "".join(result)
 
 def generateUUID(version=4):
+    """ @hamdivazim - generates a UUID using version 4 by default but you can choose. """
+
     if version < 1 or version > 5:
         raise ValueError(f"{version} is not a valid UUID version number (valid values are 1-5).")
     else:
@@ -119,3 +124,13 @@ def generateUUID(version=4):
             return uuid.uuid4()
         elif version == 5:
             return uuid.uuid5()
+        
+def external_verbose_output(data, path="data.log"):
+    """ @hamdivazim - if you are printing a lot of data, you can use this method to write the output to log file. """
+
+    if not os.path.exists(path):
+        open(path, "x").close()
+
+    with open(path, "w") as f:
+        f.write("# Logged by usefulibs.external_verbose_output()\n\n")
+        f.write(data)

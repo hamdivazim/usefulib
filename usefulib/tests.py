@@ -47,8 +47,8 @@ class TestUsefulibs(unittest.TestCase):
 
     def test_filter_by_string(self):
         """ @hamdivazim """
-        lst = ["I really do love apples!", "Bananas are disgusting!", "An apple a day keeps the doctor away!", "You want a pear?"]
-        lst2 = [1, "I really do love apples!", "Bananas are disgusting!", "An apple a day keeps the doctor away!", "You want a pear?"]
+        lst = ["I really do love apples!", "Bananas are nice!", "An apple a day keeps the doctor away!", "You want a pear?"]
+        lst2 = [1, "I really do love apples!", "Bananas are nice!", "An apple a day keeps the doctor away!", "You want a pear?"]
 
         self.assertEqual(filter_by_string(lst, "apple")[1], "An apple a day keeps the doctor away!")
         self.assertRaises(TypeError, filter_by_string, lst2, "apple")
@@ -65,6 +65,14 @@ class TestUsefulibs(unittest.TestCase):
     def test_generateUUID(self):
         """ @hamdivazim """
         self.assertNotEqual(generateUUID(), generateUUID())
+        self.assertRaises(ValueError, generateUUID, 6)
+
+    def test_external_verbose_output(self):
+        """ @hamdivazim """
+        external_verbose_output("Test Data\n1 2 3\na b c", R"usefulib\temp_data\ext_verbose_test.log")
+
+        with open(R"usefulib\temp_data\ext_verbose_test.log", "r") as f:
+            self.assertEqual(f.read(), "# Logged by usefulibs.external_verbose_output()\n\nTest Data\n1 2 3\na b c")
 
 
 if __name__ == "__main__":
