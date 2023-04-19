@@ -7,6 +7,13 @@ https://github.com/hamdivazim/usefulib
 Add your useful method here if you are contributing. Remember to add unit tests in tests.py :)
 """
 
+if __name__ == "__main__":
+    import setup_script
+else:
+    from . import setup_script
+
+setup_script.SETUP() # If you need any setup scripts, write them in setup_script.py. 
+
 def reverse_string(string):
     """ @hamdivazim - Reverses a string. """
 
@@ -80,3 +87,35 @@ def filter_by_condition(lst, condition: str):
         exec(f"if({condition}):result+=i")
 
     return result
+
+def generate_random_string(word_length):
+    components = [string.ascii_letters, string.digits, "!@#$%&"]
+
+    chars = []
+
+    for clist in components:
+        for item in clist:
+            chars.append(item)
+
+    result = []
+
+    for i in range(word_length):
+        rchar = random.choice(chars)
+        result.append(rchar)
+
+    return "".join(result)
+
+def generateUUID(version=4):
+    if version < 1 or version > 5:
+        raise ValueError(f"{version} is not a valid UUID version number (valid values are 1-5).")
+    else:
+        if version == 1:
+            return uuid.uuid1()
+        elif version == 2:
+            return uuid.uuid2()
+        elif version == 3:
+            return uuid.uuid3()
+        elif version == 4:
+            return uuid.uuid4()
+        elif version == 5:
+            return uuid.uuid5()
