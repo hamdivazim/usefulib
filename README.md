@@ -11,4 +11,4 @@ $ pip install usefulib
 usefulib is open-source and can be contributed to by anyone. Therefore, it offers a lot of simple functions to make writing code easier and quicker. A complete list of all fuctions usefulib provides can be found [here](https://github.com/hamdivazim/usefulib/blob/main/ALLFUNCTIONS.md).
 
 ## Can I contribute?
-Want to contribbute? You rock! Before you do, make sure to read the [contributing guidelines]([url](https://github.com/hamdivazim/usefulib/blob/main/CONTRIBUTING.md)) and you should have your PR merged!
+Want to contribute? You rock! Before you do, make sure to read the [contributing guidelines]([url](https://github.com/hamdivazim/usefulib/blob/main/CONTRIBUTING.md)) and you should have your PR merged!
