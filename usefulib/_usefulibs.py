@@ -7,12 +7,13 @@ https://github.com/hamdivazim/usefulib
 Add your useful method here if you are contributing. Remember to add unit tests in tests.py :)
 """
 
-if __name__ == "__main__":
-    import setup_script
-else:
-    from . import setup_script
+""" Setup - add any setup scripts here remembering to put the function(s) they are for. """
 
-setup_script.SETUP() # If you need any setup scripts, write them in setup_script.py. 
+import random # generate_random_string()
+import string # generate_random_string()
+import uuid # generateUUID()
+
+""""""
 
 def reverse_string(string):
     """ @hamdivazim - Reverses a string. """
@@ -37,7 +38,7 @@ def loop_dict(dictionary):
     i = 0
 
     for key in dictionary.keys():
-        result += (key, dictionary[key], i)
+        result.append((key, dictionary[key], i))
 
         i += 1
 
@@ -46,24 +47,23 @@ def loop_dict(dictionary):
 def find_nth_root(num, n):
     """ @hamdivazim - Returns the nth root of a number you provide. """
 
+    if num < 0:
+        raise ValueError("Cannot get root of a negative number.")
+
     return num ** (1 / n)
 
-def filter_by_string(lst, string):
+def filter_by_string(lst, stri):
     """ 
     @hamdivazim - Filters a list based on whether elements contain a specific string.
     Probably best used when filtering by a search query.
     """
 
-    result = []
+    try:
+        result = [x for x in lst if stri in x]
 
-    for element in lst:
-        try:
-            if string in element:
-                result += element
-        except TypeError:
-            raise TypeError("A non-string value was found while using the usefulib.filter_by_string method. Maybe try using filter_by_condition?")
-        
-    return result
+        return result
+    except TypeError:
+        raise TypeError("A non-string value was found while filtering. Maybe try using filter_by_condition()?")
 
 def filter_by_condition(lst, condition: str):
     """
@@ -84,11 +84,11 @@ def filter_by_condition(lst, condition: str):
     result = []
 
     for i in lst:
-        exec(f"if({condition}):result+=i")
+        exec(f"if({condition}):result.append(i)")
 
     return result
 
-def generate_random_string(word_length):
+def generate_random_string(word_length=18):
     components = [string.ascii_letters, string.digits, "!@#$%&"]
 
     chars = []
