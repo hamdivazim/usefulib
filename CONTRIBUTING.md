@@ -2,6 +2,13 @@
 Want to contribute? You rock! But first, read these contributing guidelines to ensure your pull request is merged!
 
 ## Contents
+- [Creating a usefulib](#creating-a-usefulib)
+  - [Typing your idea up](#typing-your-idea-up)
+  - [Example of a usefulib](#example-of-a-usefulib)
+- [Writing tests](#writing-tests)
+  - [Creating a test](#creating-a-test)
+  - [Example of a test](#example-of-a-test)
+ - [Opening A Pull Request](#opening-a-pull-request)
 
 ## Creating a usefulib
 First, you need to come up with an idea for a usefulib. You need to try and keep it short but still make a task that would've taken more than two lines into one line. Make sure your idea is original by checking that someone hasn't already used your idea [here](https://github.com/hamdivazim/usefulib/blob/main/ALLFUNCTIONS.md). Then, it's time to get coding!
@@ -36,6 +43,7 @@ def reverse_string(string):
 
     return string[::-1]
 ```
+When you have added your usefulib, remember to add it to the list of [all usefulibs](https://github.com/hamdivazim/usefulib/blob/main/ALLFUNCTIONS.md).
 
 ## Writing tests
 Now that you've written your usefulib, you should test it! For this, naviagte to `tests.py` in the same directory. **Note:** this requires that you know how to write good unit tests in Python using `unittest`. If you don't know how to, watch this [awesome tutorial](https://www.youtube.com/watch?v=6tNS--WetLI) by Corey Schafer!
