@@ -66,4 +66,4 @@ def test_reverse_string(self):
 ```
 
 ## Opening a Pull Request
-When your usefulib and tests are ready, it's time to contribute! Simply open a pull request, remembering to mention what you have added, whether you were able to add tests or not and anything else you think I need to know. Just for reference, your changes may not appear on the pip pacakage immediately after it is merged. You may have to wait for a couple days.
+When your usefulib and tests are ready, it's time to contribute! Simply open a pull request, remembering to mention what you have added, whether you were able to add tests or not and anything else you think I need to know. Another note, do NOT change `setup.py` or your pull request will not be merged. Just for reference, your changes may not appear on the pip package immediately after it is merged. You may have to wait for a couple days.
