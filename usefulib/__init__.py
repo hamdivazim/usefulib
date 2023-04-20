@@ -7,4 +7,4 @@ https://github.com/hamdivazim/usefulib
 
 __version__ = "1.0.0"
 
-from _usefulibs import *
+from ._usefulibs import *
