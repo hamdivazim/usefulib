@@ -32,7 +32,7 @@ Want to contribute? You rock! Before you do, make sure to read the [contributing
 
 # Setting up
 setup(
-    name="usefulibs",
+    name="usefulib",
     version=VERSION,
     author="Hamdi Vazim",
     author_email="<codingboy.cw@gmail.com>",
