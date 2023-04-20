@@ -44,7 +44,7 @@ setup(
     keywords=['python', 'useful', 'usefulib', 'collection'],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
-        "Intended Audience :: Developers"
+        "Intended Audience :: Developers",
         "Programming Language :: Python :: 3",
         "Operating System :: Unix",
         "Operating System :: MacOS :: MacOS X",
