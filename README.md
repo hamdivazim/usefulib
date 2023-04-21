@@ -1,5 +1,6 @@
 # usefulib v1.0.2
 A useful library for Python with assorted functions to make small tasks easier.
+### NOTE: this branch is for pip installations straight from GitHub ONLY. To contribute, open a pull request on the [main branch](https://github.com/hamdivazim/usefulib/tree/main).
 
 ## How to install
 Install with pip in your terminal, making sure Python is added to PATH:
