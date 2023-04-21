@@ -2,11 +2,13 @@ from setuptools import setup, find_packages
 import codecs
 import os
 
-VERSION = '1.0.1'
+VERSION = '1.0.2'
 DESCRIPTION = 'A collection of assorted methods to make small tasks easier..'
 LONG_DESCRIPTION = """
-# usefulib v1.0
+# usefulib v1.0.2
 A useful library for Python with assorted functions to make small tasks easier.
+
+### GitHub Page: https://github.com/hamdivazim/usefulib
 
 ## How to install
 Install with pip in your terminal, making sure Python is added to PATH:

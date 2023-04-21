@@ -1,4 +1,4 @@
-# usefulib v1.0
+# usefulib v1.0.2
 A useful library for Python with assorted functions to make small tasks easier.
 
 ## How to install
