@@ -9,6 +9,7 @@ This is where you should write unit tests for your useful method. If you can't d
 """
 
 import unittest
+import hashlib
 from _usefulibs import *
 
 class TestUsefulibs(unittest.TestCase):
@@ -73,6 +74,19 @@ class TestUsefulibs(unittest.TestCase):
 
         with open(R"usefulib\temp_data\ext_verbose_test.log", "r") as f:
             self.assertEqual(f.read(), "# Logged by usefulibs.external_verbose_output()\n\nTest Data\n1 2 3\na b c")
+    def test_get_hash(self):
+        """ @MKM12345 """
+        string1 = "Hello, world!"
+        expected_hash1 = hashlib.sha256(string1.encode('utf-8')).hexdigest()
+        self.assertEqual(get_hash(string1), expected_hash1)
+
+        string2 = ""
+        expected_hash2 = hashlib.sha256(string2.encode('utf-8')).hexdigest()
+        self.assertEqual(get_hash(string2), expected_hash2)
+
+        string3 = "This is a longer string that I am using to test the get_hash function. It should produce the same hash every time it is called with this input."
+        expected_hash3 = hashlib.sha256(string3.encode('utf-8')).hexdigest()
+        self.assertEqual(get_hash(string3), expected_hash3)
 
 
 if __name__ == "__main__":
