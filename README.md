@@ -6,7 +6,7 @@ Install with pip in your terminal, making sure Python is added to PATH:
 ```
 $ pip install usefulib
 ```
-Alernatively, you can use the git URL to do the same.
+Alternatively, you can use the git URL to do the same.
 ```
 $ pip install "git+https://github.com/hamdivazim/usefulib.git@pip-install#egg=usefulib"
 ```
