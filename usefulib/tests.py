@@ -76,16 +76,13 @@ class TestUsefulibs(unittest.TestCase):
             self.assertEqual(f.read(), "# Logged by usefulibs.external_verbose_output()\n\nTest Data\n1 2 3\na b c")
     def test_get_hash(self):
         """ @MKM12345 """
-        input_password = "password123"
-        stored_hash = _usefulibs.get_hash(input_password) 
-
-        user_input = input("Enter a password: ")
-        hashed_input = _usefulibs.get_hash(user_input)
-
-        if hashed_input == stored_hash:
-        print("Correct")
+        password = "myPassword123"
+        password_hash = get_hash(password)
+        user_input = input("Please enter your password: ")
+        if get_hash(user_input) == password_hash:
+            print("Welcome!")
         else:
-        print("Wrong")
+            print("Incorrect password")
 
 
 if __name__ == "__main__":
