@@ -1,0 +1,4 @@
+contact_links:
+  - name: Ask a question
+    url: https://github.com/hamdivazim/usefulib/discussions/new?category=q-a
+    about: Ask questions here.
