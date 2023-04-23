@@ -9,6 +9,7 @@ This is where you should write unit tests for your useful method. If you can't d
 """
 
 import unittest
+import _usefulibs
 from _usefulibs import *
 
 class TestUsefulibs(unittest.TestCase):
@@ -73,6 +74,15 @@ class TestUsefulibs(unittest.TestCase):
 
         with open(R"usefulib\temp_data\ext_verbose_test.log", "r") as f:
             self.assertEqual(f.read(), "# Logged by usefulibs.external_verbose_output()\n\nTest Data\n1 2 3\na b c")
+    def test_get_hash(self):
+        """ @MKM12345 """
+        password = "myPassword123"
+        password_hash = get_hash(password)
+        user_input = input("Please enter your password: ")
+        if get_hash(user_input) == password_hash:
+            print("Welcome!")
+        else:
+            print("Incorrect password")
 
 
 if __name__ == "__main__":
