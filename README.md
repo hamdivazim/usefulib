@@ -1,5 +1,5 @@
-# usefulib v1.0.2
-<img src="https://github.com/hamdivazim/usefulib/raw/main/logo.png" align="right">
+<img src="https://github.com/hamdivazim/usefulib/raw/main/logo.png">
+<h1>usefulib v1.0.2</h1>
 A useful library for Python with assorted functions to make small tasks easier.
 
 ## How to install
