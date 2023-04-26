@@ -9,7 +9,7 @@
 
 
 
-<h1>usefulib v1.0.3</h1>
+<h1>usefulib v1.0.4</h1>
 A useful library for Python with <em>a lot</em> of assorted functions to make numerous small tasks easier.
 
 ## How to install

@@ -1,9 +1,7 @@
 from setuptools import setup, find_packages
-import codecs
-import os
 
-VERSION = '1.0.3'
-DESCRIPTION = 'A collection of assorted methods to make small tasks easier..'
+VERSION = '1.0.4'
+DESCRIPTION = 'A collection of assorted methods to make small tasks easier.'
 LONG_DESCRIPTION = """
 <div align="center">
   <img src="https://github.com/hamdivazim/usefulib/raw/main/logo.png">
@@ -16,7 +14,7 @@ LONG_DESCRIPTION = """
 
 
 
-<h1>usefulib v1.0.2</h1>
+<h1>usefulib v1.0.4</h1>
 A useful library for Python with <em>a lot</em> of assorted functions to make numerous small tasks easier.
 
 ### GitHub Page: https://github.com/hamdivazim/usefulib
