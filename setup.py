@@ -2,11 +2,22 @@ from setuptools import setup, find_packages
 import codecs
 import os
 
-VERSION = '1.0.2'
+VERSION = '1.0.3'
 DESCRIPTION = 'A collection of assorted methods to make small tasks easier..'
 LONG_DESCRIPTION = """
-# usefulib v1.0.2
-A useful library for Python with assorted functions to make small tasks easier.
+<div align="center">
+  <img src="https://github.com/hamdivazim/usefulib/raw/main/logo.png">
+</div>
+<a style="display:inline;" href="#"><img src="https://img.shields.io/badge/Python- >= 2.7 -blue?style=plastic.svg" alt="python versions" /></a>
+<a style="display:inline;" href="#"><img src="https://badge.fury.io/py/usefulib.svg" alt="pypi version" /></a>
+<a style="display:inline;" href="#"><img src="https://img.shields.io/badge/first timer-friendly-4DC71F?style=plastic.svg" alt="first timer friendly" /></a>
+<a style="display:inline;" href="https://github.com/hamdivazim/usefulib/labels/usefulib-idea"><img src="https://img.shields.io/github/issues-raw/hamdivazim/usefulib/usefulib-idea?color=4DC71F&label=usefulib%20ideas" alt="usefulib ideas" /></a>
+<a style="display:inline;" href="#"><img src="https://img.shields.io/badge/tests- all passing -4DC71F?style=plastic.svg" alt="usefulib ideas" /></a>
+
+
+
+<h1>usefulib v1.0.2</h1>
+A useful library for Python with <em>a lot</em> of assorted functions to make numerous small tasks easier.
 
 ### GitHub Page: https://github.com/hamdivazim/usefulib
 
@@ -14,6 +25,10 @@ A useful library for Python with assorted functions to make small tasks easier.
 Install with pip in your terminal, making sure Python is added to PATH:
 ```
 $ pip install usefulib
+```
+Alternatively, you can use the git URL to do the same.
+```
+$ pip install "git+https://github.com/hamdivazim/usefulib.git@pip-install#egg=usefulib"
 ```
 
 ## How to use
@@ -24,19 +39,30 @@ import usefulib
 a_string = "abcdef123456"
 reverse_string = usefulib.reverse_string(a_string)
 ```
+If all you need is one usefulib:
+```python
+from usefulib import reverse_string
+
+a_string = "abcdef123456"
+reverse_string = reverse_string(a_string)
+```
 
 ## What can it do?
-usefulib is open-source and can be contributed to by anyone. Therefore, it offers a lot of simple functions to make writing code easier and quicker. A complete list of all fuctions usefulib provides can be found [here](https://github.com/hamdivazim/usefulib/blob/main/ALLFUNCTIONS.md).
+As an open-source library and can be contributed to by anyone, it offers a lot of simple functions to make writing code easier and quicker. A complete list of all usefulibs that are available can be found [here](https://github.com/hamdivazim/usefulib/blob/main/ALLFUNCTIONS.md).
 
-## Can I contribute?
-Want to contribute? You rock! Before you do, make sure to read the [contributing guidelines](https://github.com/hamdivazim/usefulib/blob/main/CONTRIBUTING.md) and you should have your PR merged!
+## Support usefulib
+usefulib is full of contributions from the community! We're beginner-friendly here, so read the [contributing guidelines](https://github.com/hamdivazim/usefulib/blob/main/CONTRIBUTING.md) and give us your best usefulibs 😃!
+
+## License
+usefulib is licensed under the [GNU General Public License v3.0](https://github.com/hamdivazim/usefulib/blob/main/LICENSE).
+
 """
 
 # Setting up
 setup(
     name="usefulib",
     version=VERSION,
-    author="Hamdi Vazim",
+    author="Hamd Waseem",
     author_email="<codingboy.cw@gmail.com>",
     description=DESCRIPTION,
     long_description_content_type="text/markdown",
