@@ -1,5 +1,5 @@
 """
-usefulib v1.0.2
+usefulib v1.0.4
 Copyright Hamd Waseem (https://github.com/hamdivazim) under the GNU Public License 3.0.
 
 https://github.com/hamdivazim/usefulib
@@ -74,6 +74,10 @@ class TestUsefulibs(unittest.TestCase):
         with open(R"usefulib\temp_data\ext_verbose_test.log", "r") as f:
             self.assertEqual(f.read(), "# Logged by usefulibs.external_verbose_output()\n\nTest Data\n1 2 3\na b c")
 
+    def test_get_hash(self):
+        """ @MKM12345 + @hamdivazim """
+        self.assertEqual(get_hash("abc123"), get_hash("abc123"))
+        self.assertRaises(TypeError, get_hash, 1)
 
 if __name__ == "__main__":
     unittest.main()

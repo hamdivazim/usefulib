@@ -1,5 +1,5 @@
 """
-usefulib v1.0.2
+usefulib v1.0.4
 Copyright Hamd Waseem (https://github.com/hamdivazim) under the GNU Public License 3.0.
 
 https://github.com/hamdivazim/usefulib
@@ -13,6 +13,7 @@ import random # generate_random_string()
 import string # generate_random_string()
 import uuid # generateUUID()
 import os # external_verbose_output()
+import hashlib # get_hash()
 
 """"""
 
@@ -134,3 +135,13 @@ def external_verbose_output(data, path="data.log"):
     with open(path, "w") as f:
         f.write("# Logged by usefulibs.external_verbose_output()\n\n")
         f.write(data)
+
+def get_hash(string):
+    """
+    @MKM12345 + @hamdivazim - This function takes a string as input, hashes it using the SHA-256 algorithm, and returns the hexadecimal representation of the hash value. Useful for developers that one to store strings without actually having to store them.
+    """
+
+    if not isinstance(string, str):
+        raise TypeError("get_hash() cannot get the hash of a non-string.")
+
+    return hashlib.sha256(string.encode('utf-8')).hexdigest()
