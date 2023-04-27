@@ -11,7 +11,7 @@ Want to contribute? You rock! But first, read these contributing guidelines to e
  - [Opening A Pull Request](#opening-a-pull-request)
 
 ## Creating a usefulib
-First, you need to come up with an idea for a usefulib. You need to try and keep it short but still make a task that would've taken more than two lines into one line. Make sure your idea is original by checking that someone hasn't already used your idea [here](https://github.com/hamdivazim/usefulib/blob/main/ALLFUNCTIONS.md). Then, it's time to get coding!
+First, you need to come up with an idea for a usefulib. You need to try and keep it short but still make a task that would've taken more than two lines into one line. Make sure your idea is original by checking that someone hasn't already used your idea [here](https://github.com/hamdivazim/usefulib/blob/main/ALLFUNCTIONS.md). If you need inspriation, take a look at some [ideas from the community](https://github.com/hamdivazim/usefulib/labels/usefulib-idea). Then, it's time to get coding!
 ### Typing your idea up
 Before getting started, remember to fork and clone this repository (if this is your first time, [follow this guide](https://github.com/firstcontributions/first-contributions)). Then open `usefulib/_usefulibs.py` in your code editor. If your script needs any kind of setup (for example imports) then put them at the top here:
 ```python
@@ -67,3 +67,5 @@ def test_reverse_string(self):
 
 ## Opening a Pull Request
 When your usefulib and tests are ready, it's time to contribute! Simply open a pull request, remembering to mention what you have added, whether you were able to add tests or not and anything else you think I need to know. Another note, do NOT change `setup.py` or your pull request will not be merged. Just for reference, your changes may not appear on the pip package immediately after it is merged. You may have to wait for a couple days.
+
+**NOTE**: The [code of conduct](https://github.com/hamdivazim/usefulib/blob/main/CODE_OF_CONDUCT.md) must be followed during your contributions to usefulib.
