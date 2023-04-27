@@ -14,7 +14,8 @@ import string # generate_random_string()
 import uuid # generateUUID()
 import os # external_verbose_output()
 import hashlib # get_hash()
-
+import sys # calculate_fibonacci()
+import numpy # is_palindrome()
 """"""
 
 def reverse_string(string):
@@ -145,3 +146,21 @@ def get_hash(string):
         raise TypeError("get_hash() cannot get the hash of a non-string.")
 
     return hashlib.sha256(string.encode('utf-8')).hexdigest()
+
+
+def calculate_fibonacci(n):
+    """
+    @TheCodingLedendofTheNether - Returns the requested nth number in the Fibonacci sequence.
+    """
+    sys.setrecursionlimit(10**6) 
+    if n <= 1:
+        return n
+    else:
+        return calculate_fibonacci(n-1) + calculate_fibonacci(n-2)
+def is_palindrome(s):
+    """
+    @TheCodingLedendofTheNether - Checks if a string is a palindrome using a numpy array.
+    """
+    a = numpy.array(list(s.lower()))
+    a = a[numpy.char.isalnum(a)]
+    return numpy.array_equal(a, a[::-1])
