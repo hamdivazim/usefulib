@@ -79,5 +79,21 @@ class TestUsefulibs(unittest.TestCase):
         self.assertEqual(get_hash("abc123"), get_hash("abc123"))
         self.assertRaises(TypeError, get_hash, 1)
 
+    def test_is_palindrome(self):
+        """ @TheCodingLedendofTheNether """
+        self.assertTrue(is_palindrome("racecar"))
+        self.assertFalse(is_palindrome("hello world"))
+        self.assertTrue(is_palindrome("A man a plan a canal Panama"))
+    
+    def test_calculate_fibonacci(self):
+        """ @TheCodingLedendofTheNether """
+        self.assertEqual(calculate_fibonacci(0), 0)
+        self.assertEqual(calculate_fibonacci(1), 1)
+        self.assertEqual(calculate_fibonacci(2), 1)
+        self.assertEqual(calculate_fibonacci(3), 2)
+        self.assertEqual(calculate_fibonacci(4), 3)
+        self.assertEqual(calculate_fibonacci(5), 5)
+        self.assertEqual(calculate_fibonacci(6), 8)
+
 if __name__ == "__main__":
     unittest.main()
