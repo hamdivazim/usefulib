@@ -41,3 +41,6 @@ Generates a UUID using version 4 by default but you can choose.
 If you are printing a lot of data, you can use this method to write the output to log file.
 ## get_hash() by @MKM12345
 This takes a string as input, hashes it using the SHA-256 algorithm, and returns the hexadecimal representation of the hash value.
+
+## denary_to_ternary() by @AtomicCodeLegend
+Converts from denary to ternary
