@@ -78,6 +78,12 @@ class TestUsefulibs(unittest.TestCase):
         """ @MKM12345 + @hamdivazim """
         self.assertEqual(get_hash("abc123"), get_hash("abc123"))
         self.assertRaises(TypeError, get_hash, 1)
+        
+    def test_denary_to_ternary(self):
+        """ @AtomicCodeLegend """
+        self.assertEqual(denary_to_ternary(20), 202)
+        self.assertEqual(denary_to_ternary(86), 10012)
+        self.assertEqual(denary_to_ternary(1), 1)
 
 if __name__ == "__main__":
     unittest.main()

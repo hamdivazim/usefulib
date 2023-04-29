@@ -145,3 +145,18 @@ def get_hash(string):
         raise TypeError("get_hash() cannot get the hash of a non-string.")
 
     return hashlib.sha256(string.encode('utf-8')).hexdigest()
+
+def denary_to_ternary(n):
+    """ @AtomicCodeLegend - Converts from denary to ternary base 3 """
+    
+    res = 0
+
+    if n == 0:
+        res = '0'
+    nums = []
+    while n:
+        n, r = divmod(n, 3)
+        nums.append(str(r))
+    res= ''.join(reversed(nums))
+
+    return int(res)
