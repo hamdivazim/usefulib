@@ -44,5 +44,8 @@ As an open-source library and can be contributed to by anyone, it offers a lot o
 ## Support usefulib
 usefulib is full of contributions from the community! We're beginner-friendly here, so read the [contributing guidelines](https://github.com/hamdivazim/usefulib/blob/main/CONTRIBUTING.md) and give us your best usefulibs 😃!
 
+## View [the site](https://hamdivazim.github.io/usefulib/)
+Recently, usefulib's website launched at https://hamdivazim.github.io/usefulib/, feel free to report bugs or give feature requests, using the `web-issue` label. Or, take a look at [the discussion](https://github.com/hamdivazim/usefulib/discussions/13).
+
 ## License
 usefulib is licensed under the [GNU General Public License v3.0](https://github.com/hamdivazim/usefulib/blob/main/LICENSE).
