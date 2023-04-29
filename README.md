@@ -12,7 +12,7 @@
 <h1>usefulib website v1.0</h1>
 A useful library for Python with <em>a lot</em> of assorted functions to make numerous small tasks easier.
 
-This is the site hosted at ...
+This is the site hosted at https://hamdivazim.github.io/usefulib/
 
 ### Library Notes
 ## How to install
