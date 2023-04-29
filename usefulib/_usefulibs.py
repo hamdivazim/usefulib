@@ -149,15 +149,14 @@ def get_hash(string):
 def denary_to_ternary(n):
     """ @AtomicCodeLegend - Converts from denary to ternary base 3 """
     
-    sign = '-' if n < 0 else ''
-    n = abs(n)
-    
-    if n < 3:
-        return str(n)
-    
-    s = ''
-    while n != 0:
-        s = str(n%3) + s
-        n = n//3
-        return sign+s
+    res = 0
 
+    if n == 0:
+        res = '0'
+    nums = []
+    while n:
+        n, r = divmod(n, 3)
+        nums.append(str(r))
+    res= ''.join(reversed(nums))
+
+    return int(res)
