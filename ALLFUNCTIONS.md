@@ -44,3 +44,6 @@ This takes a string as input, hashes it using the SHA-256 algorithm, and returns
 
 ## denary_to_ternary() by @AtomicCodeLegend
 Converts from denary to ternary
+
+## convert_base by @ShadowStrike-Atomiser
+Converts requested base to another (base 2-16).
