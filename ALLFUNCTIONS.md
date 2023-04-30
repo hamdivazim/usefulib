@@ -44,3 +44,7 @@ This takes a string as input, hashes it using the SHA-256 algorithm, and returns
 
 ## denary_to_ternary() by @AtomicCodeLegend
 Converts from denary to ternary
+## calculate_fibonacci() by @TheCodingLedendoftheNether
+This calculates and returns the nth Fibonacci number using recursion.
+## is_palindrome() by @TheCodingLedendoftheNether
+This checks whether a given string is a palindrome, meaning it reads the same backward as forward
