@@ -158,6 +158,23 @@ def denary_to_ternary(n):
         n, r = divmod(n, 3)
         nums.append(str(r))
     res= ''.join(reversed(nums))
+def calculate_fibonacci(n):
+    """
+    @TheCodingLedendofTheNether + MKM12345 - Returns the requested nth number in the Fibonacci sequence.
+    """
+    sys.setrecursionlimit(10**6) 
+    if n <= 1:
+        return n
+    else:
+        return calculate_fibonacci(n-1) + calculate_fibonacci(n-2)
+def is_palindrome(s):
+    """
+    @TheCodingLedendofTheNether - Checks if a string is a palindrome using a numpy array.
+    """
+    a = numpy.array(list(s.lower()))
+    a = a[numpy.char.isalnum(a)]
+    return numpy.array_equal(a, a[::-1]) 
+    return int(res)
 
     return int(res)
 def convert_base():
