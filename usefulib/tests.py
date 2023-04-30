@@ -84,6 +84,22 @@ class TestUsefulibs(unittest.TestCase):
         self.assertEqual(denary_to_ternary(20), 202)
         self.assertEqual(denary_to_ternary(86), 10012)
         self.assertEqual(denary_to_ternary(1), 1)
+         def test_convert_base(self):
+        # test case 1
+        user_input = ['10', '2', '13']
+        expected_output = "The number in base 2 is: 1101"
+        with unittest.mock.patch('builtins.input', side_effect=user_input), \
+             unittest.mock.patch('builtins.print') as mock_print:
+            convert_base()
+            mock_print.assert_called_with(expected_output)
+
+        # test case 2
+        user_input = ['2', '16', '1101']
+        expected_output = "The number in base 16 is: D"
+        with unittest.mock.patch('builtins.input', side_effect=user_input), \
+             unittest.mock.patch('builtins.print') as mock_print:
+            convert_base()
+            mock_print.assert_called_with(expected_output)
 
 if __name__ == "__main__":
     unittest.main()
