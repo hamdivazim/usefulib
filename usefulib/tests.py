@@ -99,22 +99,16 @@ class TestUsefulibs(unittest.TestCase):
         self.assertEqual(calculate_fibonacci(4), 3)
         self.assertEqual(calculate_fibonacci(5), 5)
         self.assertEqual(calculate_fibonacci(6), 8)
+        
     def test_convert_base(self):
-        # test case 1
-        user_input = ['10', '2', '13']
-        expected_output = "The number in base 2 is: 1101"
-        with unittest.mock.patch('builtins.input', side_effect=user_input), \
-             unittest.mock.patch('builtins.print') as mock_print:
-            convert_base()
-            mock_print.assert_called_with(expected_output)
-
-        # test case 2
-        user_input = ['2', '16', '1101']
-        expected_output = "The number in base 16 is: D"
-        with unittest.mock.patch('builtins.input', side_effect=user_input), \
-             unittest.mock.patch('builtins.print') as mock_print:
-            convert_base()
-            mock_print.assert_called_with(expected_output)
+        self.assertEqual(convert_base(2, 10, '1010'), '10')
+        self.assertEqual(convert_base(10, 2, '10'), '1010')
+        self.assertEqual(convert_base(16, 8, '3E8'), '1750')
+        self.assertEqual(convert_base(8, 16, '1750'), '3E8')
+        self.assertEqual(convert_base(2, 16, '101010'), '2A')
+        self.assertEqual(convert_base(16, 2, '2A'), '101010')
+        self.assertEqual(convert_base(10, 16, '255'), 'FF')
+        self.assertEqual(convert_base(16, 10, 'FF'), '255')
 
 if __name__ == "__main__":
     unittest.main()
