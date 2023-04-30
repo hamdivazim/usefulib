@@ -138,7 +138,7 @@ def external_verbose_output(data, path="data.log"):
 
 def get_hash(string):
     """
-    @MKM12345 + @hamdivazim - This function takes a string as input, hashes it using the SHA-256 algorithm, and returns the hexadecimal representation of the hash value. Useful for developers that one to store strings without actually having to store them.
+    @MKM12345 + @hamdivazim - This function takes a string as input, hashes it using the SHA-256 algorithm, and returns the hexadecimal representation of the hash value. Useful for developers that want to store strings without actually having to store them.
     """
 
     if not isinstance(string, str):
