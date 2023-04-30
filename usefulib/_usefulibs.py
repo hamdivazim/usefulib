@@ -177,14 +177,12 @@ def is_palindrome(s):
     return int(res)
 
     return int(res)
-def convert_base():
-    """@ShadowStrike-Atomiser - Converts a number from one base to another"""
-    from_base = int(input("Type a base:"))
-    to_base = int(input("Type another base (2-16): "))
-    num = input("Type a number in base " + str(from_base) + ": ")
-
+def convert_base(from_base: int, to_base: int, num: str) -> str:
+    """Converts a number from one base to another"""
+    # Convert the input number to base 10
     base_10_num = 0
     power = 0
+    
     for digit in num[::-1]:
         if digit.isdigit():
             base_10_num += int(digit) * (from_base ** power)
@@ -192,7 +190,9 @@ def convert_base():
             base_10_num += (ord(digit.upper()) - 55) * (from_base ** power)
         power += 1
 
+    # Convert the base 10 number to the new base
     new_num = ""
+    
     while base_10_num > 0:
         digit = base_10_num % to_base
         if digit < 10:
@@ -200,4 +200,5 @@ def convert_base():
         else:
             new_num = chr(ord('A') + digit - 10) + new_num
         base_10_num //= to_base
-    print("The number in base " + str(to_base) + " is:", new_num)
+    # Return the number in the new base
+    return new_num
