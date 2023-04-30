@@ -84,6 +84,22 @@ class TestUsefulibs(unittest.TestCase):
         self.assertEqual(denary_to_ternary(20), 202)
         self.assertEqual(denary_to_ternary(86), 10012)
         self.assertEqual(denary_to_ternary(1), 1)
+    def test_is_palindrome(self):
+        """ @TheCodingLedendofTheNether + MKM12345 """
+        self.assertTrue(is_palindrome("racecar"))
+        self.assertFalse(is_palindrome("hello world"))
+        self.assertTrue(is_palindrome("A man a plan a canal Panama"))
+
+    def test_calculate_fibonacci(self):
+        """ @TheCodingLedendofTheNether + MKM12345"""
+        self.assertEqual(calculate_fibonacci(0), 0)
+        self.assertEqual(calculate_fibonacci(1), 1)
+        self.assertEqual(calculate_fibonacci(2), 1)
+        self.assertEqual(calculate_fibonacci(3), 2)
+        self.assertEqual(calculate_fibonacci(4), 3)
+        self.assertEqual(calculate_fibonacci(5), 5)
+        self.assertEqual(calculate_fibonacci(6), 8)
+    
 
 if __name__ == "__main__":
     unittest.main()
