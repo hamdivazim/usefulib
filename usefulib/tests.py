@@ -84,6 +84,31 @@ class TestUsefulibs(unittest.TestCase):
         self.assertEqual(denary_to_ternary(20), 202)
         self.assertEqual(denary_to_ternary(86), 10012)
         self.assertEqual(denary_to_ternary(1), 1)
+    def test_is_palindrome(self):
+        """ @TheCodingLedendofTheNether + MKM12345 """
+        self.assertTrue(is_palindrome("racecar"))
+        self.assertFalse(is_palindrome("hello world"))
+        self.assertTrue(is_palindrome("A man a plan a canal Panama"))
+
+    def test_calculate_fibonacci(self):
+        """ @TheCodingLedendofTheNether + MKM12345"""
+        self.assertEqual(calculate_fibonacci(0), 0)
+        self.assertEqual(calculate_fibonacci(1), 1)
+        self.assertEqual(calculate_fibonacci(2), 1)
+        self.assertEqual(calculate_fibonacci(3), 2)
+        self.assertEqual(calculate_fibonacci(4), 3)
+        self.assertEqual(calculate_fibonacci(5), 5)
+        self.assertEqual(calculate_fibonacci(6), 8)
+        
+    def test_convert_base(self):
+        self.assertEqual(convert_base(2, 10, '1010'), '10')
+        self.assertEqual(convert_base(10, 2, '10'), '1010')
+        self.assertEqual(convert_base(16, 8, '3E8'), '1750')
+        self.assertEqual(convert_base(8, 16, '1750'), '3E8')
+        self.assertEqual(convert_base(2, 16, '101010'), '2A')
+        self.assertEqual(convert_base(16, 2, '2A'), '101010')
+        self.assertEqual(convert_base(10, 16, '255'), 'FF')
+        self.assertEqual(convert_base(16, 10, 'FF'), '255')
 
 if __name__ == "__main__":
     unittest.main()
