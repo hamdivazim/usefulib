@@ -14,6 +14,8 @@ import string # generate_random_string()
 import uuid # generateUUID()
 import os # external_verbose_output()
 import hashlib # get_hash()
+import sys # calculate_fibbonaci()
+import numpy # is_palindrome
 
 """"""
 
@@ -157,7 +159,10 @@ def denary_to_ternary(n):
     while n:
         n, r = divmod(n, 3)
         nums.append(str(r))
-    res= ''.join(reversed(nums))
+    res = ''.join(reversed(nums))
+
+    return int(res)
+
 def calculate_fibonacci(n):
     """
     @TheCodingLedendofTheNether + MKM12345 - Returns the requested nth number in the Fibonacci sequence.
@@ -167,6 +172,7 @@ def calculate_fibonacci(n):
         return n
     else:
         return calculate_fibonacci(n-1) + calculate_fibonacci(n-2)
+    
 def is_palindrome(s):
     """
     @TheCodingLedendofTheNether - Checks if a string is a palindrome using a numpy array.
@@ -174,11 +180,10 @@ def is_palindrome(s):
     a = numpy.array(list(s.lower()))
     a = a[numpy.char.isalnum(a)]
     return numpy.array_equal(a, a[::-1]) 
-    return int(res)
 
-    return int(res)
 def convert_base(from_base: int, to_base: int, num: str) -> str:
-    """Converts a number from one base to another"""
+    """ @ShadowStrike-Atomiser - Converts a number from one base to another """
+
     # Convert the input number to base 10
     base_10_num = 0
     power = 0
@@ -200,5 +205,6 @@ def convert_base(from_base: int, to_base: int, num: str) -> str:
         else:
             new_num = chr(ord('A') + digit - 10) + new_num
         base_10_num //= to_base
+
     # Return the number in the new base
     return new_num

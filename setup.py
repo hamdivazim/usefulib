@@ -66,7 +66,7 @@ setup(
     long_description_content_type="text/markdown",
     long_description=LONG_DESCRIPTION,
     packages=find_packages(),
-    install_requires=[],
+    install_requires=["numpy"],
     keywords=['python', 'useful', 'usefulib', 'collection'],
     classifiers=[
         "Development Status :: 5 - Production/Stable",

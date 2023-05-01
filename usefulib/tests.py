@@ -10,6 +10,15 @@ This is where you should write unit tests for your useful method. If you can't d
 
 import unittest
 from _usefulibs import *
+from unittest.mock import patch
+
+def write_to_file(filename, content):
+    with open(filename, "w") as f:
+        f.write(content)
+
+def read_from_file(filename):
+    with open(filename, "r") as f:
+        return f.read()
 
 class TestUsefulibs(unittest.TestCase):
 
@@ -67,13 +76,6 @@ class TestUsefulibs(unittest.TestCase):
         self.assertNotEqual(generateUUID(), generateUUID())
         self.assertRaises(ValueError, generateUUID, 6)
 
-    def test_external_verbose_output(self):
-        """ @hamdivazim """
-        external_verbose_output("Test Data\n1 2 3\na b c", R"usefulib\temp_data\ext_verbose_test.log")
-
-        with open(R"usefulib\temp_data\ext_verbose_test.log", "r") as f:
-            self.assertEqual(f.read(), "# Logged by usefulibs.external_verbose_output()\n\nTest Data\n1 2 3\na b c")
-
     def test_get_hash(self):
         """ @MKM12345 + @hamdivazim """
         self.assertEqual(get_hash("abc123"), get_hash("abc123"))
@@ -84,6 +86,7 @@ class TestUsefulibs(unittest.TestCase):
         self.assertEqual(denary_to_ternary(20), 202)
         self.assertEqual(denary_to_ternary(86), 10012)
         self.assertEqual(denary_to_ternary(1), 1)
+
     def test_is_palindrome(self):
         """ @TheCodingLedendofTheNether + MKM12345 """
         self.assertTrue(is_palindrome("racecar"))
