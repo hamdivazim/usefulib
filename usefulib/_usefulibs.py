@@ -208,3 +208,18 @@ def convert_base(from_base: int, to_base: int, num: str) -> str:
 
     # Return the number in the new base
     return new_num
+def calculate_average(numbers):
+    """ @VortexVanguard - Calculate the average of a list of numbers."""
+    if not isinstance(numbers, list):
+        raise TypeError("Input must be a list of numbers.")
+
+    if len(numbers) == 0:
+        raise ZeroDivisionError("List cannot be empty.")
+
+    for number in numbers:
+        if not isinstance(number, (int, float)):
+            raise TypeError("All elements of the list must be numbers.")
+
+    total = sum(numbers)
+    average = total / len(numbers)
+    return average
