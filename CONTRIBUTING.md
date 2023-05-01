@@ -27,7 +27,7 @@ import setup_stuff # the_usefulib_this_is_for()
 ```
 If you are importing anything from pip, mention the library in your pull request.
 ###
-Then, write your usefulib! Name it anything you want (of course related to what you are adding) and get coding 😄. At the top of your usefulib, you should  write a multiline comment and type your username on GitHub, and what the usefulib does. As an example:
+Then, write your usefulib! Name it anything you want (of course related to what you are adding) and get coding 😄. At the top of your usefulib, you should  write a multiline comment and type your username on GitHub, and what the usefulib does. The usefulib (if it needs input) should have parameters and **should return an output**. As an example:
 ```python
 def my_awesome_usefulib():
     """ @hamdivazim - A very awesome description of this awesome usefulib! """
@@ -55,7 +55,7 @@ def test_reverse_string(self):
 ```
 Now you should put your username in triple quotes at the top like this: `""" @hamdivazim """`. Then, write some tests! You will need to use the assert methods found in the [full list on Python's documentation](https://docs.python.org/3/library/unittest.html#unittest.TestCase.debug). If your tests need any form of setup, write those in the `setUp()` method.
 ###
-If you are generating external files in these tests, make sure these are written into the `temp_data/` directory. If you need one, an example is in the `test_external_verbose_output()` test.
+If you are generating external files in these tests, I recommend using mocks, but in case you don't know how to use mocks (as it is an advanced concept) make sure they are written into the `temp_data/` directory. If you need one, an example is in the `test_external_verbose_output()` test.
 ### Example of a test
 ```python
 def test_reverse_string(self):
