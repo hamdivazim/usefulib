@@ -1,5 +1,5 @@
 """
-usefulib v1.0.4
+usefulib v1.0.5
 Copyright Hamd Waseem (https://github.com/hamdivazim) under the GNU Public License 3.0.
 
 https://github.com/hamdivazim/usefulib
@@ -10,7 +10,6 @@ This is where you should write unit tests for your useful method. If you can't d
 
 import unittest
 from _usefulibs import *
-from unittest.mock import patch
 
 def write_to_file(filename, content):
     with open(filename, "w") as f:
