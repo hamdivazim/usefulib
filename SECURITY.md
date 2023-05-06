@@ -8,4 +8,4 @@ usefulibs do not require any personal data of any sort. In case you notice that 
 
 ## Reporting a Vulnerability
 
-Open an issue with the `security-issue` label. Make sure to explain what the usefulib is and who it's made by.
+Open an issue with the `security-issue` label or use our template. Make sure to explain what the usefulib is and who it's made by.
