@@ -2,7 +2,7 @@
 name: Usefulib Idea
 about: Give any usefulib ideas for others to work on.
 title: Usefulib Idea
-labels: enhancement, first-timer-friendly, usefulib-idea
+labels: enhancement, first-timer-friendly, good first issue, usefulib-idea
 assignees: hamdivazim
 
 ---
