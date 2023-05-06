@@ -2,7 +2,7 @@
 name: Security Concern
 about: Report any security vulnerabilities here after reading the policy.
 title: Security Concern - [TITLE HERE]
-labels: bug, security-concern
+labels: bug, security-issue
 assignees: hamdivazim
 
 ---
