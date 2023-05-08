@@ -111,6 +111,10 @@ class TestUsefulibs(unittest.TestCase):
         self.assertEqual(convert_base(16, 2, '2A'), '101010')
         self.assertEqual(convert_base(10, 16, '255'), 'FF')
         self.assertEqual(convert_base(16, 10, 'FF'), '255')
+    def test_calculate_average(self):
+        numbers = [1, 2, 3, 4, 5]
+        expected_average = 3.0
+        self.assertEqual(calculate_average(numbers), expected_average)
 
 if __name__ == "__main__":
     unittest.main()

@@ -48,5 +48,7 @@ Converts from denary to ternary
 This calculates and returns the nth Fibonacci number using recursion.
 ## is_palindrome() by @TheCodingLedendoftheNether
 This checks whether a given string is a palindrome, meaning it reads the same backward as forward.
-## convert_base by @ShadowStrike-Atomiser
+## convert_base() by @ShadowStrike-Atomiser
 Converts from one base to another (base 2-16).
+## calculate_average() by @VortexVanguard
+Calculates the average of a set of numbers.
