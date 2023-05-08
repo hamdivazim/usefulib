@@ -114,7 +114,7 @@ class TestUsefulibs(unittest.TestCase):
     def test_calculate_average(self):
         numbers = [1, 2, 3, 4, 5]
         expected_average = 3.0
-        self.assertAlmostEqual(calculate_average(numbers), expected_average)
+        self.assertEqual(calculate_average(numbers), expected_average)
 
 if __name__ == "__main__":
     unittest.main()
