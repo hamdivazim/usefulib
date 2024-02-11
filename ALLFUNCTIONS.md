@@ -50,3 +50,6 @@ This calculates and returns the nth Fibonacci number using recursion.
 This checks whether a given string is a palindrome, meaning it reads the same backward as forward.
 ## convert_base by @ShadowStrike-Atomiser
 Converts from one base to another (base 2-16).
+
+## Extract Bytes from File: `extract_bytes(filename, arg1, arg2)` by @Cracko298
+## Convert Bytes to Integer: `convert_bytes(bytestring,order="")` by @Cracko298
