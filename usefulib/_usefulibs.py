@@ -208,3 +208,33 @@ def convert_base(from_base: int, to_base: int, num: str) -> str:
 
     # Return the number in the new base
     return new_num
+
+def extract_bytes(filename, arg1, arg2):
+    """ @Cracko298 - Extracts bytes from file for arg1 until arg2"""
+
+    with open(filename, 'rb+') as file:
+        try:
+            file.seek(arg1)
+            extracted_bytes = file.read(arg2 - arg1)
+            return extracted_bytes
+        
+        except Exception as e:
+            return f"Error extracting bytes: {e}"
+
+def convert_bytes(bytestring,order=""):
+    """ @Cracko298 - Converts bytes to Int"""
+
+    if not isinstance(bytestring, (bytes, bytearray)):
+        return "Invalid input. Please provide a valid bytearray or bytes object."
+
+    if order == "r" or order == "R":
+        bytestring[::-1]
+
+    elif order == "f" or order == "F" or order == "":
+        pass
+
+    else:
+        return "Invlid Order Options."
+
+    byte_data = int.from_bytes(bytestring)
+    return byte_data
