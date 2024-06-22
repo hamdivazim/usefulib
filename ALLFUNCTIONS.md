@@ -53,3 +53,6 @@ Converts from one base to another (base 2-16).
 
 ## Extract Bytes from File: `extract_bytes(filename, arg1, arg2)` by @Cracko298
 ## Convert Bytes to Integer: `convert_bytes(bytestring,order="")` by @Cracko298
+
+## Sort List of Numbers: `qsort(numlist, start, end)` by @silas-wr
+Sorts the numbers from **numlist**[**start**] to **numlist**[**end**] using the quicksort algorithm.
