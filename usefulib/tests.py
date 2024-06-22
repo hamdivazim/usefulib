@@ -112,5 +112,22 @@ class TestUsefulibs(unittest.TestCase):
         self.assertEqual(convert_base(10, 16, '255'), 'FF')
         self.assertEqual(convert_base(16, 10, 'FF'), '255')
 
+    def test_qsort(self):
+        """@silas-wr"""
+        # Test fractions
+        tlist1 = [1, 0.5, 7, 10, 3, 2]
+        qsort(tlist1, 0, len(tlist1))
+        self.assertEqual(tlist1, [0.5, 1, 2, 3, 7, 10])
+
+        # Test negative numbers
+        tlist2 = [1, -5, 7, 0, 3, 2]
+        qsort(tlist2, 0, len(tlist2))
+        self.assertEqual(tlist2, [-5, 0, 1, 2, 3, 7])
+
+        # Test integers
+        tlist3 = [1, 100, 7, 10, 3, 2]
+        qsort(tlist3, 0, len(tlist3))
+        self.assertEqual(tlist3, [1, 2, 3, 7, 10, 100])
+
 if __name__ == "__main__":
     unittest.main()
