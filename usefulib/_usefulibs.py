@@ -238,3 +238,33 @@ def convert_bytes(bytestring,order=""):
 
     byte_data = int.from_bytes(bytestring)
     return byte_data
+
+def swp(lst, ind1, ind2):
+    """@silas-wr - swap two items in a list"""
+    temp = lst[ind1]
+    lst[ind1] = lst[ind2]
+    lst[ind2] = temp
+    
+def qsort(numlist, left, right):
+    """@silas-wr - sort a numlist[left] ... numlist[right] into increasing order using the Quicksort algorithm"""
+
+    for num in numlist:
+        if type(num) != int & type(num) != float:
+            return "Invalid list"
+
+    if left >= right:
+        return
+    
+    swp(numlist, left, len(intlist) // 2)
+    last = left
+    i = left + 1
+
+    while i <= right:
+        if numlist[i] < numlist[left]:
+            last += 1
+            swp(numlist, last, i)
+        i += 1
+
+    swap(numlist, left, last);
+    qsort(numlist, left, last-1);
+    qsort(numlist, last+1, right);
